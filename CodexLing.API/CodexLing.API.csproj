@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>CodexLing.API</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\CodexLing.Models\*.cs" Link="CodexLing.Models\%(Filename)%(Extension)" />
+    <Compile Include="..\CodexLing.Query\Interfaces\*.cs" Link="CodexLing.Query\Interfaces\%(Filename)%(Extension)" />
+    <Compile Include="..\CodexLing.Query\Implements\*.cs" Link="CodexLing.Query\Implements\%(Filename)%(Extension)" />
+    <Compile Include="..\CodexLing.Repository\Interfaces\*.cs" Link="CodexLing.Repository\Interfaces\%(Filename)%(Extension)" />
+    <Compile Include="..\CodexLing.Repository\Implements\*.cs" Link="CodexLing.Repository\Implements\%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NSwag.AspNetCore" Version="14.7.1" />
+  </ItemGroup>
+</Project>
